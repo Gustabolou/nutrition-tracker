@@ -84,8 +84,8 @@ npm install
 
 3. Set up the environment:
 ```bash
-VITE_NUTRITIONIX_ID=seu_app_id
-VITE_NUTRITIONIX_KEY=seu_app_key
+VITE_NUTRITIONIX_ID=your_app_id
+VITE_NUTRITIONIX_KEY=your_app_key
 ```
 
 4. Start the development server:

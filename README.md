@@ -1,12 +1,126 @@
-# React + Vite
+# Nutrition Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Captura de tela 2025-04-27 165401](https://github.com/user-attachments/assets/2f66d2f6-ec54-4a50-b400-24e7a1876bc7)
 
-Currently, two official plugins are available:
+### Overview
+A comprehensive web application for tracking nutritional information about foods. Works both online (with real-time data from Nutritionix API) and offline (with local database), providing a fast, responsive experience across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+#### Dual Mode Operation
+- **Online Mode**: Real-time data from Nutritionix API
+- **Offline Mode**: Comprehensive local database fallback
 
-## Expanding the ESLint configuration
+#### Food Categories
+- Fruits (15+ items)
+- Vegetables (15+ items)
+- Proteins (15+ items)
+- Grains (15+ items)
+- Dairy (15+ items)
+- Snacks (15+ items)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### Advanced Functionality
+- **Sorting**:
+  - Name (A-Z/Z-A)
+  - Calories (Low-High/High-Low)
+- **Filtering**:
+  - All items
+  - Low Calories (<100)
+  - High Calories (≥100)
+
+#### UI/UX Features
+- Fully responsive design
+- Dark/light mode support
+- Real-time status monitoring
+- Last update timestamp
+
+### Technologies
+#### Frontend
+- React (Vite)
+- CSS3 (Variables, Grid, Flexbox)
+- Responsive Web Design
+
+#### Backend Integration
+- Nutritionix API
+- Local data fallback system
+
+#### Build Tools
+- Vite
+- ESLint
+
+---
+
+## 🧩 Project Structure
+
+```
+nutrition-tracker/
+├── src/
+│ ├── App.jsx # Main component
+│ ├── List.jsx # List component
+│ ├── main.jsx # Entry point
+│ ├── index.css # Global styles
+│ └── README.md # Documentation
+├── public/
+│ └── index.html # HTML template
+├── package.json # Dependencies
+├── vite.config.js # Vite configuration
+└── eslint.config.js # ESLint configuration
+```
+
+---
+
+
+### ⚙️ Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/nutrition-tracker.git
+cd nutrition-tracker
+```
+
+2. Install the dependencies:
+```bash
+npm install
+```
+
+3. Set up the environment:
+```bash
+VITE_NUTRITIONIX_ID=seu_app_id
+VITE_NUTRITIONIX_KEY=seu_app_key
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+```
+
+#### 🌐 API Setup
+
+1. Create an account on Nutritionix
+2. Obtain your API credentials
+3. Add them to your ```.env``` file
+
+```javascript
+{
+  category: [
+    {
+      id: Number,
+      name: String,
+      calories: Number
+    }
+  ]
+}
+```
+
+🔄 Comportamento do Sistema
+1. Attempt API connection
+2. Fallback to local data if offline
+3. Periodic connection checks (10min interval)
+
+📜 License
+  MIT License
+
+🙏Credits
+  API Nutritionix, 
+  Vite Development Team & 
+  React Community

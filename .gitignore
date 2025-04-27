@@ -1,0 +1,28 @@
+# ==== Dependências ====
+/node_modules/
+/.yarn/
+/.pnp/
+.pnpm-store/
+
+# ==== Builds/Ambiente ====
+/dist/
+/.cache/
+.env
+.env.local
+.env*.local
+
+# ==== Lockfiles (opcional - descomente se NÃO quiser versionar) ====
+package-lock.json  # Remova o '#' se decidir ignorar
+pnpm-lock.yaml
+yarn.lock
+
+# ==== Editor/OS ====
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# ==== Logs/Debug ====
+*.log
+npm-debug.log*
+yarn-error.log
